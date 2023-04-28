@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+/* CSS RESET */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  background-color: hsl(0, 0%, 94%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.calculator-container {
+  width: 50%;
+  height: 70vh;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px 20px 150px 20px;
+  padding: 3%;
+}
+
+.input-container {
+  display: flex;
+  width: 75%;
+  gap: 2%;
+  color: hsl(0, 1%, 44%);
+}
+
+.input-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-block label {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.input-block input {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 800;
+  padding: 1rem;
+  border: none;
+  border: 1px solid hsl(0, 0%, 86%);
+  border-radius: 10px;
+}
+
+.btn-container {
+  display: flex;
+  height: 2.5rem;
+  align-items: center;
+  display: relative;
+}
+
+hr {
+  border: none;
+  background-color: hsl(0, 0%, 86%);
+  width: 100%;
+  height: 1px;
+}
+
+.btn {
+  width: 5rem;
+  height: 5rem;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  background-color: hsl(259, 100%, 65%);
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: hsl(0, 0%, 8%);
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 55%;
+}
+
+.pink {
+  color: hsl(259, 100%, 65%);
+  font-weight: 800;
+  font-style: italic;
+  margin-right: 1rem;
+}
+
+.content-container h2 {
+  font-size: 4rem;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1.1;
+}
+
+.error {
+  font-size: 11px;
+  font-weight: 400;
+  height: 1.2rem;
+  color: hsl(0, 100%, 67%);
+}
+
+.error-color {
+  color: hsl(0, 100%, 67%);
+}
+
+.input-error-color {
+  border-color: hsl(0, 100%, 67%);
+}
+
+@media (max-width: 1024px) {
+  .calculator-container {
+    width: 85%;
+  }
+}
+@media (max-width: 576px) {
+  .calculator-container {
+    width: 90%;
+    height: 60vh;
+    padding: 2rem;
+  }
+
+  .input-container {
+    width: 100%;
+  }
+
+  .input-block {
+    flex: 1;
+  }
+
+  .input-block input {
+    font-size: 1.5rem;
+  }
+
+  .btn-container {
+    height: 3rem;
+    justify-content: center;
+  }
+
+  .btn {
+    position: absolute;
+  }
+
+  .content-container h2 {
+    font-size: 3.5rem;
+  }
+}
