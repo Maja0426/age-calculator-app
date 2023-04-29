@@ -65,6 +65,11 @@ body {
   border-radius: 10px;
 }
 
+.input-block input:active,
+.input-block input:focus {
+  outline: 2px solid hsl(228, 45%, 44%);
+}
+
 .btn-container {
   display: flex;
   height: 2.5rem;
@@ -80,6 +85,7 @@ hr {
 }
 
 .btn {
+  border: none;
   width: 5rem;
   height: 5rem;
   display: grid;
@@ -128,7 +134,7 @@ hr {
 }
 
 .input-error-color {
-  border-color: hsl(0, 100%, 67%);
+  outline: 1px solid hsl(0, 100%, 67%);
 }
 
 @media (max-width: 1024px) {
