@@ -17,6 +17,10 @@ let actualDay = new Date().getDate()
 let actualYear = new Date().getFullYear()
 let errorsBool = false
 
+let dayValue = Number(day.value)
+let monthValue = Number(month.value)
+let yearValue = Number(year.value)
+
 function getDaysInMonth(year, month) {
   const date = new Date(year, month, 0)
   return date.getDate()
@@ -90,7 +94,7 @@ btn.addEventListener('click', function (e) {
   clearData()
   clearErrors()
   errorsBool = false
-  errors(day.value, month.value, year.value)
+  errors(dayValue, monthValue, yearValue)
   let birthday = new Date(`${month.value} ${day.value}, ${year.value}`)
   let distance = now - birthday
 
@@ -109,7 +113,7 @@ btn.addEventListener('click', function (e) {
       rYear.innerText = Math.trunc(years - 1)
       rMonth.innerText = 11
       rDay.innerText =
-        getDaysInMonth(year.value, month.value) - (day.value - actualDay)
+        getDaysInMonth(yearValue, monthValue) - (dayValue - actualDay)
     }
   }
 })
