@@ -139,7 +139,7 @@ hr {
 @media (max-width: 576px) {
   .calculator-container {
     width: 90%;
-    height: 60vh;
+    height: 70vh;
     padding: 2rem;
   }
 
@@ -152,7 +152,7 @@ hr {
   }
 
   .input-block input {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .btn-container {
@@ -165,6 +165,6 @@ hr {
   }
 
   .content-container h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 }
