@@ -22,58 +22,54 @@ function getDaysInMonth(year, month) {
   return date.getDate()
 }
 
-function errors(day, month, year) {
-  if (day > getDaysInMonth(year, month) && day < 32) {
+function errors(days, months, years) {
+  if (days > getDaysInMonth(years, months) && days < 32) {
     dayError.innerText = 'Must be a valid date'
     label[0].classList.add('error-color')
     day.classList.add('input-error-color')
     errorsBool = true
-  } else {
-    label[0].classList.remove('error-color')
-  }
-  if (day === '') {
+  } else if (days === '') {
     dayError.innerText = 'This field is required'
     label[0].classList.add('error-color')
     day.classList.add('input-error-color')
     errorsBool = true
-  } else {
-    label[0].classList.remove('error-color')
-  }
-  if (day > 31) {
+  } else if (days > 31) {
     dayError.innerText = 'Must be a valid day'
     label[0].classList.add('error-color')
-    day.classList.add('input-error-color')
+    iday.classList.add('input-error-color')
     errorsBool = true
   } else {
     label[0].classList.remove('error-color')
+    day.classList.remove('input-error-color')
   }
-  if (month > 12) {
+  if (months > 12) {
     monthError.innerText = 'Must be a valid month'
     label[1].classList.add('error-color')
+    month.classList.add('input-error-color')
     errorsBool = true
-  } else {
-    label[1].classList.remove('error-color')
-  }
-  if (month === '') {
+  } else if (months === '') {
     monthError.innerText = 'This field is required'
     label[1].classList.add('error-color')
+    month.classList.add('input-error-color')
     errorsBool = true
   } else {
     label[1].classList.remove('error-color')
+    month.classList.remove('input-error-color')
   }
-  if (year > actualYear) {
+
+  if (years > actualYear) {
     yearError.innerText = 'Must be in the past'
     label[2].classList.add('error-color')
+    year.classList.add('input-error-color')
     errorsBool = true
-  } else {
-    label[2].classList.remove('error-color')
-  }
-  if (year === '') {
+  } else if (years === '') {
     yearError.innerText = 'This field is required'
     label[2].classList.add('error-color')
+    year.classList.add('input-error-color')
     errorsBool = true
   } else {
     label[2].classList.remove('error-color')
+    year.classList.remove('input-error-color')
   }
 }
 
@@ -89,7 +85,8 @@ function clearData() {
   rDay.innerText = '--'
 }
 
-btn.addEventListener('click', function () {
+btn.addEventListener('click', function (e) {
+  e.preventDefault()
   clearData()
   clearErrors()
   errorsBool = false

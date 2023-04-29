@@ -17,29 +17,31 @@
   </head>
   <body>
     <main class="calculator-container">
-      <div class="input-container">
-        <div class="input-block">
-          <label for="day">day</label>
-          <input type="text" class="day" placeholder="DD" />
-          <h6 class="day-error error"></h6>
+      <form action="">
+        <div class="input-container">
+          <div class="input-block">
+            <label for="day">day</label>
+            <input type="text" class="day" placeholder="DD" />
+            <h6 class="day-error error"></h6>
+          </div>
+          <div class="input-block">
+            <label for="month">month</label>
+            <input type="text" class="month" placeholder="MM" />
+            <h6 class="month-error error"></h6>
+          </div>
+          <div class="input-block">
+            <label for="year">year</label>
+            <input type="text" class="year" placeholder="YYYY" />
+            <h6 class="year-error error"></h6>
+          </div>
         </div>
-        <div class="input-block">
-          <label for="month">month</label>
-          <input type="text" class="month" placeholder="MM" />
-          <h6 class="month-error error"></h6>
+        <div class="btn-container">
+          <hr />
+          <button class="btn" type="submit">
+            <img src="assets/images/icon-arrow.svg" alt="logo" />
+          </button>
         </div>
-        <div class="input-block">
-          <label for="year">year</label>
-          <input type="text" class="year" placeholder="YYYY" />
-          <h6 class="year-error error"></h6>
-        </div>
-      </div>
-      <div class="btn-container">
-        <hr />
-        <div class="btn">
-          <img src="assets/images/icon-arrow.svg" alt="logo" />
-        </div>
-      </div>
+      </form>
       <div class="content-container">
         <h2><span class="pink result-years">--</span>years</h2>
         <h2><span class="pink result-months">--</span>months</h2>
