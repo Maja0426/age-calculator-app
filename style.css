@@ -106,6 +106,7 @@ hr {
   flex-direction: column;
   justify-content: center;
   height: 55%;
+  margin-top: 3rem;
 }
 
 .pink {
@@ -116,7 +117,7 @@ hr {
 }
 
 .content-container h2 {
-  font-size: 4rem;
+  font-size: 7rem;
   font-weight: 800;
   font-style: italic;
   line-height: 1.1;
