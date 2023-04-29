@@ -94,9 +94,9 @@ btn.addEventListener('click', function (e) {
   let birthday = new Date(`${month.value} ${day.value}, ${year.value}`)
   let distance = now - birthday
 
-  let days = Math.floor(distance / (1000 * 60 * 60 * 24))
-  let months = Math.floor((days % 365) / 30)
-  let years = Math.floor(days / 365)
+  let days = Math.floor(Number(distance) / (1000 * 60 * 60 * 24))
+  let months = Math.floor((Number(days) % 365) / 30)
+  let years = Math.floor(Number(days) / 365)
 
   if (errorsBool) {
     return
