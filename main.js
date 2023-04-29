@@ -113,7 +113,7 @@ btn.addEventListener('click', function (e) {
       rYear.innerText = Math.trunc(years - 1)
       rMonth.innerText = 11
       rDay.innerText =
-        getDaysInMonth(yearValue, monthValue) - (dayValue - actualDay)
+        getDaysInMonth(yearValue, month.value) - (day.value - actualDay)
     }
   }
 })
